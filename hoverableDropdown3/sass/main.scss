@@ -1,0 +1,33 @@
+@import "../../reset";
+@import "../../typography";
+
+.hoverDropdown {
+  // border: 1px solid black;
+  display: inline-block;
+  position: relative;
+  &-button {
+    border: none;
+    padding: 0.5rem 1rem;
+    background: rgb(23, 192, 192);
+    color: white;
+  }
+  &-links {
+    display: none;
+    width: 10rem;
+    position: absolute;
+    box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.2);
+    a {
+      display: block;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: black;
+      background: #f1f1f1;
+      &:hover {
+        background: #818181;
+      }
+    }
+  }
+  &:hover &-links {
+    display: block;
+  }
+}
