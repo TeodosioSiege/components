@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../Montserrat/Montserrat-Medium.ttf);
+}
+
+* {
+  font-family: "Montserrat";
+}
+
+.sidenav {
+  height: 100%;
+  width: 10rem;
+  background-color: #111;
+  position: fixed;
+  padding-top: 1rem;
+}
+
+.sidenav-link {
+  color: #818181;
+  text-decoration: none;
+  display: block;
+  padding: 6px 0.5rem 6px 1rem;
+  font-size: 1.5rem;
+}
+
+.sidenav-link:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 10rem;
+  padding: 1rem;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 450px) {
+  .sidenav-link {
+    font-size: 1.1rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,32 @@
+@import "../../reset";
+@import "../../typography";
+
+.sidenav {
+  height: 100%;
+  width: 10rem;
+  background-color: #111;
+  position: fixed;
+  padding-top: 1rem;
+  &-link {
+    color: #818181;
+    text-decoration: none;
+    display: block;
+    padding: 6px 0.5rem 6px 1rem;
+    font-size: 1.5rem;
+    &:hover {
+      color: #f1f1f1;
+    }
+  }
+}
+
+.main {
+  margin-left: 10rem;
+  padding: 1rem;
+  line-height: 1.5;
+}
+
+@media screen AND (max-width: 450px) {
+  .sidenav-link {
+    font-size: 1.1rem;
+  }
+}
