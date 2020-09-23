@@ -1,0 +1,61 @@
+@import "../../reset";
+@import "../../typography";
+
+body {
+  background: white;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.overlay {
+  position: relative;
+  width: 100%;
+  &-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  &-wrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1692bb;
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+  &-text {
+    color: white;
+    font-size: 1.25rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  &:hover &-wrapper {
+    opacity: 1;
+  }
+
+  &:hover &-image {
+    opacity: 0.33;
+  }
+
+  //box opacity
+
+  &-image-opacity {
+    opacity: 1;
+    transition: 0.3s ease;
+    backface-visibility: hidden;
+  }
+  &-wrapper-opacity {
+    background: transparent;
+  }
+  &-text-opacity {
+    background: #0e9712;
+    padding: 1rem 2rem;
+  }
+}

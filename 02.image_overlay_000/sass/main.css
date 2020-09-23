@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../Montserrat/Montserrat-Medium.ttf);
+}
+
+* {
+  font-family: "Montserrat";
+}
+
+body {
+  background: white;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.overlay {
+  position: relative;
+  width: 100%;
+}
+
+.overlay-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #1692bb;
+  opacity: 0;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.overlay-text {
+  color: white;
+  font-size: 1.25rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay:hover .overlay-wrapper {
+  opacity: 1;
+}
+
+.overlay:hover .overlay-image {
+  opacity: 0.33;
+}
+
+.overlay-image-opacity {
+  opacity: 1;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.overlay-wrapper-opacity {
+  background: transparent;
+}
+
+.overlay-text-opacity {
+  background: #0e9712;
+  padding: 1rem 2rem;
+}
+/*# sourceMappingURL=main.css.map */
