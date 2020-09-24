@@ -1,0 +1,33 @@
+@import "../../reset";
+@import "../../typography";
+
+.hover {
+  //border: 1px solid black;
+  display: inline-block;
+  position: relative;
+  &-btn {
+    border: none;
+    padding: 0.5rem 1rem;
+    background: teal;
+    color: white;
+  }
+  &-links {
+    position: absolute;
+    width: 10rem;
+    box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.123);
+    display: none;
+    a {
+      display: block;
+      padding: 0.5rem 1rem;
+      background: #f7f7f7;
+      color: #383838;
+      text-decoration: none;
+      &:hover {
+        background: #d3d3d3;
+      }
+    }
+  }
+  &:hover &-links {
+    display: block;
+  }
+}
