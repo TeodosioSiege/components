@@ -1,0 +1,39 @@
+@import "../../reset";
+@import "../../typography";
+
+.sidenav {
+  background: #077070;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 10rem;
+  height: 100%;
+  padding-top: 1.5rem;
+  overflow-x: hidden;
+  a {
+    display: block;
+    padding: 0.5rem 1rem 1.5rem; // s/b .5 .5 1
+    text-decoration: none;
+    color: #d8d8d8;
+    font-size: 1.5rem;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+@media screen AND (max-height: 450px) {
+  .sidenav {
+    padding-top: 1rem;
+    a {
+      font-size: 1rem;
+    }
+  }
+}
+
+.main {
+  margin-left: 10rem;
+  padding: 1rem 0.5rem; // s/b 0 0.5
+  line-height: 1.5;
+}
