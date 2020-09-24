@@ -14,10 +14,6 @@
   font-family: "Montserrat";
 }
 
-body {
-  background: white;
-}
-
 .container {
   display: -ms-grid;
   display: grid;
