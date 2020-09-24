@@ -1,0 +1,43 @@
+@import "../../reset";
+@import "../../typography";
+
+@mixin hover($color) {
+  background: darken($color, 15);
+  transform: scale(0.95);
+}
+.btn {
+  border: none;
+  padding: 1rem 2rem;
+  color: white;
+  &-success {
+    background: #098809;
+    &:hover {
+      @include hover(#098809);
+    }
+  }
+  &-info {
+    background: #1463da;
+    &:hover {
+      @include hover(#1463da);
+    }
+  }
+  &-warning {
+    background: #a06b09;
+    &:hover {
+      @include hover(#a36f0d);
+    }
+  }
+  &-danger {
+    background: #e21313;
+    &:hover {
+      @include hover(#e21313);
+    }
+  }
+  &-default {
+    color: #464646;
+    background: #c9c9c9;
+    &:hover {
+      @include hover(#c9c9c9);
+    }
+  }
+}
