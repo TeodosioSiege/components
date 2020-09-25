@@ -1,0 +1,50 @@
+@import "../../reset";
+@import "../../typography";
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.overlay {
+  width: 100%;
+  position: relative;
+  &-img {
+    display: block;
+  }
+  &-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.3s ease;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+  }
+}
+
+.fade-text > div {
+  background: teal;
+  color: #f1f1f1;
+}
+
+.fade-box:hover {
+  img {
+    opacity: 0.33;
+  }
+  p {
+    background: teal;
+    padding: 0.5em 1em;
+    color: white;
+  }
+}
