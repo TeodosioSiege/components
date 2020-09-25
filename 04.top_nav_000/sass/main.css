@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../Montserrat/Montserrat-Medium.ttf);
+}
+
+* {
+  font-family: "Montserrat";
+}
+
+.wrapper {
+  background: #077474;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 8vh;
+  background: #077474;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  color: #f1f1f1;
+  letter-spacing: 0.33rem;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 45%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style-type: none;
+  min-width: 20rem;
+}
+
+.nav-links a {
+  color: #f1f1f1;
+  text-decoration: none;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.burger {
+  display: none;
+}
+
+.burger-line {
+  width: 1.6rem;
+  height: 0.15rem;
+  background: #f1f1f1;
+  position: relative;
+}
+
+.burger-line::before {
+  content: "";
+  width: 1.6rem;
+  height: 0.15rem;
+  background: #f1f1f1;
+  position: absolute;
+  top: -0.3rem;
+}
+
+.burger-line::after {
+  content: "";
+  width: 1.6rem;
+  height: 0.15rem;
+  background: #f1f1f1;
+  position: absolute;
+  top: 0.3rem;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    overflow-x: hidden;
+  }
+  .burger {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0;
+    top: 8vh;
+    height: 92vh;
+    background: #077474;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 50%;
+    min-width: auto;
+    -webkit-transform: translate(100%);
+            transform: translate(100%);
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */
