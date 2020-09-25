@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../Montserrat/Montserrat-Medium.ttf);
+}
+
+* {
+  font-family: "Montserrat";
+}
+
+.wrapper {
+  background: teal;
+  position: relative;
+}
+
+.nav {
+  width: 80%;
+  min-height: 8vh;
+  margin: 0 auto;
+  background: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-logo {
+  color: #f1f1f1;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 0.33rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  min-width: 20rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.burger {
+  position: relative;
+  display: none;
+}
+
+.burger-line, .burger-line::before, .burger-line::after {
+  width: 1.5rem;
+  height: 2px;
+  background: #f1f1f1;
+}
+
+.burger-line::before, .burger-line::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+}
+
+.burger-line::after {
+  top: 6px;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    overflow-x: hidden;
+  }
+  .burger {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0;
+    top: 8vh;
+    height: 92vh;
+    background-color: inherit;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-width: auto;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */

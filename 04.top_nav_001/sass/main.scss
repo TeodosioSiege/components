@@ -1,0 +1,82 @@
+@import "../../reset";
+@import "../../typography";
+
+.wrapper {
+  background: teal;
+  position: relative;
+}
+
+.nav {
+  width: 80%;
+  min-height: 8vh;
+  margin: 0 auto;
+  background: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-logo {
+    color: #f1f1f1;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.33rem;
+  }
+  &-links {
+    list-style: none;
+    display: flex;
+    width: 50%;
+    min-width: 20rem;
+    justify-content: space-around;
+    a {
+      text-decoration: none;
+      color: #f1f1f1;
+      font-size: 0.9rem;
+      font-weight: bold;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.burger {
+  position: relative;
+  display: none;
+  &-line {
+    width: 1.5rem;
+    height: 2px;
+    background: #f1f1f1;
+    &::before {
+      content: "";
+      @extend .burger-line;
+      position: absolute;
+      top: -6px;
+    }
+    &::after {
+      @extend .burger-line::before;
+      top: 6px;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    overflow-x: hidden;
+  }
+  .burger {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0;
+    top: 8vh;
+    height: 92vh;
+    background-color: inherit;
+    flex-direction: column;
+    align-items: center;
+    min-width: auto;
+    transform: translateX(100%);
+    li {
+      opacity: 0;
+    }
+  }
+}
