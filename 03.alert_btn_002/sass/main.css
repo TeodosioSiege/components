@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../Montserrat/Montserrat-Medium.ttf);
+}
+
+* {
+  font-family: "Montserrat";
+}
+
+.btn {
+  border: none;
+  padding: 1em 2em;
+}
+
+.btn-success {
+  background: #0f810f;
+  color: #f2f2f2;
+}
+
+.btn-success:hover {
+  background: #0a530a;
+}
+
+.btn-success:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.btn-success:focus {
+  outline: none;
+}
+
+.btn-info {
+  background: #136eb9;
+  color: #f2f2f2;
+}
+
+.btn-info:hover {
+  background: #0e538b;
+}
+
+.btn-info:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.btn-info:focus {
+  outline: none;
+}
+
+.btn-warning {
+  background: #fca90f;
+  color: #f2f2f2;
+  color: #2e2e2e;
+}
+
+.btn-warning:hover {
+  background: #d58c03;
+}
+
+.btn-warning:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.btn-warning:focus {
+  outline: none;
+}
+
+.btn-danger {
+  background: #ca1d1d;
+  color: #f2f2f2;
+}
+
+.btn-danger:hover {
+  background: #9d1717;
+}
+
+.btn-danger:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.btn-danger:focus {
+  outline: none;
+}
+
+.btn-default:hover {
+  background: #dadada;
+}
+/*# sourceMappingURL=main.css.map */
