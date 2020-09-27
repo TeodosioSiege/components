@@ -1,0 +1,41 @@
+@import "../../reset";
+@import "../../typography";
+
+.nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background: rgb(2, 71, 71);
+  width: 10rem;
+  height: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  overflow-x: hidden; //forgot
+  a {
+    display: block;
+    font-size: 1.5rem;
+    color: #bdbdbd;
+    text-decoration: none;
+    padding: 0.5em 0.5em 1em;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.main {
+  margin-left: 10rem;
+  padding: 0 1em;
+  line-height: 1.5;
+}
+
+// forgot
+@media screen AND (max-height: 450px) {
+  .nav {
+    padding-top: 1em;
+    a {
+      font-size: 1em;
+    }
+  }
+}
