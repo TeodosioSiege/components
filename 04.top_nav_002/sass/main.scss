@@ -1,0 +1,75 @@
+@import "../../reset";
+@import "../../typography";
+
+.wrapper {
+  background: teal;
+  position: relative;
+}
+
+.nav {
+  background-color: inherit;
+  width: 80%;
+  min-height: 8vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-logo {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.33em;
+  }
+  &-links {
+    list-style: none;
+    width: 50%;
+    min-width: 18rem;
+    display: flex;
+    background-color: inherit;
+    justify-content: space-between;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.burger {
+  position: relative;
+  display: none;
+  &-line {
+    width: 1.5rem;
+    height: 3px;
+    background: white;
+    &::before {
+      content: "";
+      @extend .burger-line;
+      position: absolute;
+      top: -200%;
+    }
+    &::after {
+      @extend .burger-line::before;
+      top: 200%;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .body {
+    overflow-x: hidden;
+  }
+  .burger {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 45%;
+    height: 92vh;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateX(100%);
+  }
+}
