@@ -1,0 +1,25 @@
+@import "../../reset";
+@import "../../typography";
+
+body,
+html {
+  height: 100%;
+}
+
+.text {
+  min-height: 1000px;
+  background: rgb(247, 247, 235);
+  line-height: 1.5;
+  padding: 0.5em 1em;
+}
+
+.parallax {
+  // background: linear-gradient(rgba(0, 0, 0, 0.103), rgba(0, 0, 0, 0.103))
+  // url("../../eliz.jpg") center no-repeat;
+  background: linear-gradient(
+      rgba(23, 226, 199, 0.432),
+      rgba(23, 226, 199, 0.432)
+    ),
+    url("../../eliz.jpg") 0 25% / cover fixed;
+  height: 100%;
+}
