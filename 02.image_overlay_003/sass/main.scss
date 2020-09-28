@@ -1,0 +1,55 @@
+@import "../../reset";
+@import "../../typography";
+
+.main {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.overlay {
+  position: relative;
+  &-img {
+    width: 100%;
+    transition: 0.3s ease;
+  }
+  &-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0; //opacity not display
+    transition: 0.3s ease;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+  }
+}
+
+.fade-text {
+  div {
+    background: teal;
+    color: white;
+  }
+}
+
+.fade-box {
+  &:hover img {
+    opacity: 0.33;
+  }
+  p {
+    background: teal;
+    width: 6rem;
+    text-align: center;
+    padding: 0.5em 1em;
+    color: white;
+  }
+}

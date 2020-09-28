@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../Montserrat/Montserrat-Medium.ttf);
+}
+
+* {
+  font-family: "Montserrat";
+}
+
+.main {
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.overlay {
+  position: relative;
+}
+
+.overlay-img {
+  width: 100%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.overlay-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.overlay-card:hover {
+  opacity: 1;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+}
+
+.fade-text div {
+  background: teal;
+  color: white;
+}
+
+.fade-box:hover img {
+  opacity: 0.33;
+}
+
+.fade-box p {
+  background: teal;
+  width: 6rem;
+  text-align: center;
+  padding: 0.5em 1em;
+  color: white;
+}
+/*# sourceMappingURL=main.css.map */
