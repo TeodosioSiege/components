@@ -1,0 +1,21 @@
+@import "../../reset";
+@import "../../typography";
+
+.img {
+  height: 33vh;
+  background: url("../../eliz.jpg") 0 33% / cover;
+}
+
+.fixed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0.24));
+  padding: 0.5em 1em;
+  border: 5px solid white;
+  color: white;
+  width: 18rem; //forgot
+  text-align: center; //forgot
+}
