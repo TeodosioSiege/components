@@ -67,6 +67,12 @@
   margin-left: auto;
 }
 
+.search-button:focus {
+  outline: 0;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
 .search:focus-within {
   width: 18rem;
 }
