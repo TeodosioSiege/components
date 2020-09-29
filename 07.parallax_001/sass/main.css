@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../Montserrat/Montserrat-Medium.ttf);
+}
+
+* {
+  font-family: "Montserrat";
+}
+
+.parallax {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 192, 203, 0.384))), url("../../eliz.jpg") center/cover fixed;
+  background: linear-gradient(rgba(255, 192, 203, 0.384)), url("../../eliz.jpg") center/cover fixed;
+}
+
+.text {
+  line-height: 1.5;
+  padding: 0.5em 1em;
+}
+/*# sourceMappingURL=main.css.map */
