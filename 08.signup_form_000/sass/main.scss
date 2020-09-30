@@ -1,0 +1,71 @@
+@import "../../reset";
+@import "../../typography";
+
+.signup {
+  // border: 1px solid black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20rem;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  background: rgb(241, 241, 241);
+  padding: 1.2em;
+  text-align: center;
+  h1 {
+    color: #1c82db;
+    margin-bottom: 1em;
+  }
+  input {
+    border-radius: 20px;
+    padding: 0.75em;
+    margin: 0.75em 0;
+    width: 100%;
+    border: 1px solid #999;
+    outline: none;
+  }
+  &-submit {
+    color: #fff;
+    background: #1c82db;
+    display: block;
+    width: 100%;
+    padding: 0.75em;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    &:active {
+      background: darken(#1c82db, 10);
+    }
+  }
+  &-terms {
+    margin-bottom: 1em;
+  }
+}
+
+.float-label {
+  position: relative;
+  margin-bottom: 0.5em;
+  .label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    &-content {
+      position: absolute;
+      font-size: 0.84rem;
+      left: 0.8em;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #7c7c7c;
+      transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+  }
+}
+
+input:focus + .label > .label-content {
+  color: #1c82db;
+  top: 0;
+}
