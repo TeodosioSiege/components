@@ -1,0 +1,70 @@
+$red: #eb1414;
+$orange: #a5692c;
+$yellow: #7a7a29;
+$yellow-green: #57822b;
+$green: #2d862d;
+$blue-green: #2d8659;
+$blue: #2b8282;
+$indigo-blue: #3c78b4;
+$indigo: #1919e6;
+$violet: #8019e6;
+$purple: #bb3ebb;
+$magenta: #df2080;
+$gray: #757575;
+
+@mixin btn($color) {
+  background: $color;
+  color: white;
+  &:active {
+    background: darken($color, 10);
+    transform: scale(0.95);
+  }
+}
+
+@mixin btn-outline($color) {
+  border: 3px solid $color;
+  background: transparent;
+  color: $color;
+  &:active {
+    background: $color;
+    color: white;
+    transform: scale(0.95);
+  }
+}
+
+.btn {
+  padding: 1em 2em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  &-danger {
+    @include btn($red);
+  }
+  &-warning {
+    @include btn($orange);
+  }
+  &-success {
+    @include btn($green);
+  }
+  &-info {
+    @include btn($blue);
+  }
+  &-default {
+    @include btn($gray);
+  }
+  &-outline-success {
+    @include btn-outline(green);
+  }
+  &-outline-info {
+    @include btn-outline($blue);
+  }
+  &-outline-danger {
+    @include btn-outline($red);
+  }
+  &-outline-warning {
+    @include btn-outline($orange);
+  }
+  &-outline-default {
+    @include btn-outline($gray);
+  }
+}

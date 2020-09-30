@@ -1,0 +1,127 @@
+.btn {
+  padding: 1em 2em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-danger {
+  background: #eb1414;
+  color: white;
+}
+
+.btn-danger:active {
+  background: #bc1010;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.btn-warning {
+  background: #a5692c;
+  color: white;
+}
+
+.btn-warning:active {
+  background: #7d4f21;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.btn-success {
+  background: #2d862d;
+  color: white;
+}
+
+.btn-success:active {
+  background: #206020;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.btn-info {
+  background: #2b8282;
+  color: white;
+}
+
+.btn-info:active {
+  background: #1e5c5c;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.btn-default {
+  background: #757575;
+  color: white;
+}
+
+.btn-default:active {
+  background: #5c5c5c;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.btn-outline-success {
+  border: 3px solid green;
+  background: transparent;
+  color: green;
+}
+
+.btn-outline-success:active {
+  background: green;
+  color: white;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.btn-outline-info {
+  border: 3px solid #2b8282;
+  background: transparent;
+  color: #2b8282;
+}
+
+.btn-outline-info:active {
+  background: #2b8282;
+  color: white;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.btn-outline-danger {
+  border: 3px solid #eb1414;
+  background: transparent;
+  color: #eb1414;
+}
+
+.btn-outline-danger:active {
+  background: #eb1414;
+  color: white;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.btn-outline-warning {
+  border: 3px solid #a5692c;
+  background: transparent;
+  color: #a5692c;
+}
+
+.btn-outline-warning:active {
+  background: #a5692c;
+  color: white;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.btn-outline-default {
+  border: 3px solid #757575;
+  background: transparent;
+  color: #757575;
+}
+
+.btn-outline-default:active {
+  background: #757575;
+  color: white;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+/*# sourceMappingURL=main.css.map */
