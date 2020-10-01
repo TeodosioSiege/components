@@ -1,0 +1,61 @@
+@import "../../reset";
+@import "../../typography";
+
+.search {
+  border: 2px solid rgb(28, 143, 209);
+  width: 50px;
+  height: 3rem;
+  border-radius: 500px;
+  padding: 3px;
+  display: flex;
+  position: relative;
+  transition: 0.5s cubic-bezier(0.19, 0.9, 0.32, 1.08);
+  &-input {
+    min-width: 0;
+    flex-grow: 1;
+    flex-basis: 0;
+    outline: none;
+    border: none;
+    padding: 0.33em 0.5em;
+    background: transparent;
+    font-size: 1.5rem;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    &:focus {
+      cursor: text;
+    }
+  }
+  &-btn {
+    flex-basis: 40px;
+    background: orange;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    height: calc(3rem - 10px);
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: auto;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    &:hover {
+      background: darken(orange, 10);
+    }
+    &:focus {
+      transform: scale(1.1);
+    }
+  }
+
+  &:focus-within {
+    width: 18rem;
+
+    .search-input {
+      position: relative;
+      opacity: 1;
+    }
+    .search-btn {
+      flex-basis: 40px;
+      flex-grow: 0;
+    }
+  }
+}
