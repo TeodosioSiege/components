@@ -1,0 +1,83 @@
+@import "../../reset";
+@import "../../typography";
+
+body {
+  overflow-x: hidden;
+}
+
+$color: rgb(24, 151, 224);
+.wrapper {
+  background: $color;
+  width: 100vw;
+  position: relative;
+}
+
+.nav {
+  height: 8vh;
+  width: 80%;
+  margin: 0 auto;
+  background: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-logo {
+    font-size: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.33em;
+  }
+  &-links {
+    list-style: none;
+    min-width: 20rem;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    background: inherit;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+.burger {
+  display: none;
+  height: 1em;
+  width: 1.5em;
+  // background: red;
+  position: relative;
+  &-line {
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    &::before {
+      content: "";
+      @extend .burger-line;
+      top: -6px;
+    }
+    &::after {
+      @extend .burger-line::before;
+      top: auto;
+      bottom: -8px;
+    }
+  }
+}
+
+@media screen AND (max-width: 600px) {
+  .burger {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    min-width: 0;
+    height: 92vh;
+    flex-direction: column;
+    justify-content: space-around;
+    transform: translateX(100%);
+  }
+}

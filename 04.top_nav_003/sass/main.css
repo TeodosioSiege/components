@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../Montserrat/Montserrat-Medium.ttf);
+}
+
+* {
+  font-family: "Montserrat";
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  background: #1897e0;
+  width: 100vw;
+  position: relative;
+}
+
+.nav {
+  height: 8vh;
+  width: 80%;
+  margin: 0 auto;
+  background: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.33em;
+}
+
+.nav-links {
+  list-style: none;
+  min-width: 20rem;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: inherit;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.burger {
+  display: none;
+  height: 1em;
+  width: 1.5em;
+  position: relative;
+}
+
+.burger-line, .burger-line::before, .burger-line::after {
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.burger-line::before, .burger-line::after {
+  content: "";
+  top: -6px;
+}
+
+.burger-line::after {
+  top: auto;
+  bottom: -8px;
+}
+
+@media screen and (max-width: 600px) {
+  .burger {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    min-width: 0;
+    height: 92vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+/*# sourceMappingURL=main.css.map */
