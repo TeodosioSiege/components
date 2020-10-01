@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../Montserrat/Montserrat-Medium.ttf);
+}
+
+* {
+  font-family: "Montserrat";
+}
+
+.signup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 20rem;
+  background: #eeecec;
+  padding: 1em 1.5em;
+  line-height: 1.25;
+  text-align: center;
+  -webkit-box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.123);
+          box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.123);
+}
+
+.signup h1 {
+  color: #0084ff;
+  margin-bottom: 0.5rem;
+}
+
+.signup-input {
+  margin-top: 1.5rem;
+  width: 100%;
+  border: 1px solid #a3a3a3;
+  outline: none;
+  border-radius: 20px;
+  padding: 0.5em 1em;
+}
+
+.signup p {
+  margin-bottom: 1.5rem;
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 1em 2em;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  background: #0084ff;
+  color: white;
+}
+
+.signup-btn:hover {
+  cursor: pointer;
+}
+
+.signup-btn:active {
+  background: #006acc;
+}
+
+.float {
+  position: relative;
+}
+
+.float-label {
+  position: absolute;
+  bottom: 0.33em;
+  left: 5%;
+  color: #929292;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.float-input:focus + .float-label {
+  bottom: calc(100% - 1.4em);
+  color: #0084ff;
+}
+/*# sourceMappingURL=main.css.map */
