@@ -1,0 +1,68 @@
+@import "../../reset";
+@import "../../typography";
+body {
+  height: 100%;
+}
+
+.signup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(236, 236, 236);
+  width: 20rem;
+  padding: 1em;
+  border: 1px solid rgb(228, 228, 228);
+  border-radius: 5px;
+  line-height: 1.5;
+  text-align: center;
+  h1 {
+    color: rgb(18, 121, 206);
+  }
+  &-input {
+    width: 100%;
+    padding: 0.75em;
+    border: 1px solid gray;
+    border-radius: 20px;
+    outline: none;
+  }
+  p {
+    margin-top: 1em;
+  }
+  &-submit {
+    width: 100%;
+    margin-top: 1em;
+    padding: 0.75em;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background: rgb(18, 121, 206);
+    color: white;
+    &:hover {
+      cursor: pointer;
+    }
+    &:active {
+      transform: scale(0.97);
+      background: darken(rgb(18, 121, 206), 5);
+    }
+  }
+}
+
+.float {
+  position: relative;
+  margin-top: 2em;
+  &-label {
+    position: absolute;
+    top: 50%;
+    left: 1em;
+    text-align: left;
+    transform: translateY(-50%);
+    width: 100%;
+    color: gray;
+    transition: 0.3s;
+  }
+  input:focus + &-label {
+    color: rgb(18, 121, 206);
+    top: -33%;
+  }
+}
