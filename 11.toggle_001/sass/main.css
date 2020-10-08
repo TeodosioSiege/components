@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #e9e9e9;
+  width: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.toggle {
+  width: 4rem;
+  height: 2rem;
+  display: inline-block;
+  position: relative;
+}
+
+.toggle-check {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.toggle .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.toggle .slider::after {
+  content: "";
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  top: 50%;
+  -webkit-transform: translate(33%, -50%);
+          transform: translate(33%, -50%);
+  background: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background: #0077ff;
+}
+
+input:checked + .slider::after {
+  -webkit-transform: translate(133%, -50%);
+          transform: translate(133%, -50%);
+}
+
+.toggle-round .slider {
+  border-radius: 20px;
+}
+
+.toggle-round .slider::after {
+  border-radius: 50%;
+}
+/*# sourceMappingURL=main.css.map */
