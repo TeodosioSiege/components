@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../Montserrat/Montserrat-Medium.ttf);
+}
+
+* {
+  font-family: "Montserrat";
+}
+
+.main {
+  position: fixed;
+  min-width: 66vw;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip-text {
+  position: absolute;
+  z-index: 1;
+  width: 9rem;
+  background: teal;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  color: white;
+  padding: 0.33em;
+}
+
+.tooltip-text::after {
+  content: "";
+  border-width: 5px;
+  border-style: solid;
+  position: absolute;
+}
+
+.tooltip-text--top {
+  bottom: 125%;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.tooltip-text--top::after {
+  top: 99%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-color: teal transparent transparent transparent;
+}
+
+.tooltip-text--right {
+  left: 125%;
+  -webkit-transform: translateY(-0.33em);
+          transform: translateY(-0.33em);
+}
+
+.tooltip-text--right::after {
+  right: 99%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-color: transparent teal transparent transparent;
+}
+
+.tooltip-text--bottom {
+  top: 125%;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.tooltip-text--bottom::after {
+  bottom: 99%;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  border-color: transparent transparent teal transparent;
+}
+
+.tooltip-text--left {
+  right: 125%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.tooltip-text--left::after {
+  left: 99%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-color: transparent transparent transparent teal;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+/*# sourceMappingURL=main.css.map */

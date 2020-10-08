@@ -1,0 +1,84 @@
+@import "../../reset";
+@import "../../typography";
+
+.main {
+  // background: #ebebeb;
+  position: fixed;
+  min-width: 66vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+}
+
+.tooltip {
+  position: relative;
+  &-text {
+    position: absolute;
+    z-index: 1;
+    width: 9rem;
+    background: teal;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    color: white;
+    padding: 0.33em;
+    &::after {
+      content: "";
+      // color: black;
+      border-width: 5px;
+      border-style: solid;
+      position: absolute;
+    }
+
+    &--top {
+      bottom: 125%;
+      right: 50%;
+      transform: translateX(50%);
+      &::after {
+        top: 99%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-color: teal transparent transparent transparent;
+      }
+    }
+    &--right {
+      left: 125%;
+      transform: translateY(-0.33em);
+      &::after {
+        right: 99%;
+        top: 50%;
+        transform: translateY(-50%);
+        border-color: transparent teal transparent transparent;
+      }
+    }
+
+    &--bottom {
+      top: 125%;
+      right: 50%;
+      transform: translateX(50%);
+      &::after {
+        bottom: 99%;
+        right: 50%;
+        transform: translateX(50%);
+        border-color: transparent transparent teal transparent;
+      }
+    }
+    &--left {
+      right: 125%;
+      top: 50%;
+      transform: translateY(-50%);
+      &::after {
+        left: 99%;
+        top: 50%;
+        transform: translateY(-50%);
+        border-color: transparent transparent transparent teal;
+      }
+    }
+  }
+  &:hover &-text {
+    visibility: visible;
+    opacity: 1;
+  }
+}
