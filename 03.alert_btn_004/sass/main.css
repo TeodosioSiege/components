@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../Montserrat/Montserrat-Medium.ttf);
+}
+
+* {
+  font-family: "Montserrat";
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 1em 2em;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.btn-alert {
+  color: white;
+}
+
+.btn-alert-danger {
+  background: #df1616;
+}
+
+.btn-alert-danger:active {
+  background: #b11111;
+}
+
+.btn-alert-warning {
+  background: #966710;
+}
+
+.btn-alert-warning:active {
+  background: #68470b;
+}
+
+.btn-alert-success {
+  background: #0a800a;
+}
+
+.btn-alert-success:active {
+  background: #065106;
+}
+
+.btn-alert-info {
+  background: #5959f0;
+}
+
+.btn-alert-info:active {
+  background: #2a2aec;
+}
+
+.btn-alert-default {
+  background: #6e6d6d;
+}
+
+.btn-alert-default:active {
+  background: #545454;
+}
+
+.btn-outline {
+  background: transparent;
+}
+
+.btn-outline-danger {
+  border: 2px solid #df1616;
+  color: #df1616;
+}
+
+.btn-outline-danger:active {
+  color: white;
+  background: #df1616;
+}
+
+.btn-outline-warning {
+  border: 2px solid #966710;
+  color: #966710;
+}
+
+.btn-outline-warning:active {
+  color: white;
+  background: #966710;
+}
+
+.btn-outline-success {
+  border: 2px solid #0a800a;
+  color: #0a800a;
+}
+
+.btn-outline-success:active {
+  color: white;
+  background: #0a800a;
+}
+
+.btn-outline-info {
+  border: 2px solid #5959f0;
+  color: #5959f0;
+}
+
+.btn-outline-info:active {
+  color: white;
+  background: #5959f0;
+}
+
+.btn-outline-default {
+  border: 2px solid #6e6d6d;
+  color: #6e6d6d;
+}
+
+.btn-outline-default:active {
+  color: white;
+  background: #6e6d6d;
+}
+/*# sourceMappingURL=main.css.map */
