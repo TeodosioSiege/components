@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../Montserrat/Montserrat-Medium.ttf);
+}
+
+* {
+  font-family: "Montserrat";
+}
+
+body {
+  height: 100%;
+}
+
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  min-width: 33%;
+  background: #f0f0f0;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3.75rem;
+  height: 2.1rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.switch .slider::before {
+  content: "";
+  position: absolute;
+  height: 1.6rem;
+  width: 1.6rem;
+  left: 0.25rem;
+  bottom: 0.25rem;
+  background: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider::before {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.switch-round .slider {
+  border-radius: 20px;
+}
+
+.switch-round .slider::before {
+  border-radius: 50%;
+}
+/*# sourceMappingURL=main.css.map */
