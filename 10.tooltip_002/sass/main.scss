@@ -1,0 +1,83 @@
+@import "../../reset";
+@import "../../typography";
+
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 66%;
+  background: #ebebeb;
+  display: flex;
+  justify-content: space-around;
+  min-height: 3rem;
+  align-items: center;
+}
+
+.tooltip {
+  position: relative;
+
+  &-text {
+    position: absolute;
+    width: 8rem;
+    background: teal;
+    color: white;
+    display: none;
+    z-index: 1;
+    &::after {
+      content: "";
+      border-width: 5px;
+      border-style: solid;
+      position: absolute;
+    }
+    &-top {
+      bottom: 125%;
+      right: 50%;
+      transform: translate(50%);
+      &::after {
+        top: 99%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-color: teal transparent transparent transparent;
+      }
+    }
+    &-right {
+      top: 50%;
+      left: 125%;
+      transform: translateY(-50%);
+      &::after {
+        top: 50%;
+        right: 99%;
+        transform: translateY(-50%);
+        border-color: transparent teal transparent transparent;
+      }
+    }
+    &-bottom {
+      top: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      &::after {
+        bottom: 99%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-color: transparent transparent teal transparent;
+      }
+    }
+    &-left {
+      top: 50%;
+      right: 125%;
+      transform: translateY(-50%);
+      &::after {
+        top: 50%;
+        left: 99%;
+        transform: translateY(-50%);
+        border-color: transparent transparent transparent teal;
+      }
+    }
+  }
+  &:hover &-text {
+    display: block;
+    text-align: center;
+    padding: 1em;
+  }
+}
