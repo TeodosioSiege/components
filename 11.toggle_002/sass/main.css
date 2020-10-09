@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main {
+  position: absolute;
+  background: #ececec;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  min-width: 33vw;
+  min-height: 3em;
+  padding: 1em 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.toggle {
+  width: 3.5rem;
+  height: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.toggle-check {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #cccccc;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.toggle-slider::after {
+  content: "";
+  height: 1.5rem;
+  width: 1.5rem;
+  background: white;
+  position: absolute;
+  left: 0.25rem;
+  bottom: 50%;
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.toggle-check:checked + .toggle-slider {
+  background: #0f87be;
+}
+
+.toggle-check:checked + .toggle-slider::after {
+  -webkit-transform: translate(100%, 50%);
+          transform: translate(100%, 50%);
+}
+
+.toggle-round .toggle-slider {
+  border-radius: 20px;
+}
+
+.toggle-round .toggle-slider::after {
+  border-radius: 50%;
+}
+/*# sourceMappingURL=main.css.map */
