@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../Montserrat/Montserrat-Medium.ttf);
+}
+
+* {
+  font-family: "Montserrat";
+}
+
+.wrapper {
+  background: teal;
+  height: 8vh;
+  position: relative;
+  width: 100%;
+}
+
+.nav {
+  background: inherit;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  min-width: 360px;
+  background: inherit;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.nav-links li {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.nav-links li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: white;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #d8d7d7;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.nav-logo {
+  color: white;
+  letter-spacing: 0.33em;
+  font-size: 1.5em;
+}
+
+.burger {
+  display: none;
+  width: 1em;
+  height: 1em;
+  background: inherit;
+  position: relative;
+}
+
+.burger-line {
+  height: 3px;
+  width: 100%;
+  background: white;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.burger-line::before, .burger-line::after {
+  content: "";
+  height: 3px;
+  width: 100%;
+  background: white;
+  position: absolute;
+  bottom: 200%;
+}
+
+.burger-line::after {
+  bottom: none;
+  top: 200%;
+}
+
+@media screen and (max-width: 550px) {
+  body {
+    overflow-x: hidden;
+  }
+  .burger {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    top: 8vh;
+    height: 92vh;
+    min-width: 0;
+    right: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: translatex(100%);
+            transform: translatex(100%);
+  }
+}
+/*# sourceMappingURL=main.css.map */
