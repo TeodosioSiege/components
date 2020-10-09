@@ -1,0 +1,28 @@
+@import "../../reset";
+@import "../../typography";
+
+.nav {
+  position: fixed;
+  z-index: 1;
+  background: teal;
+  width: 10rem;
+  padding-top: 1.5rem;
+  height: 100%;
+  a {
+    display: block;
+    font-size: 1.5em;
+    padding: 1em 2em;
+    margin-bottom: 1em;
+    color: rgb(233, 232, 232);
+    text-decoration: none;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.main {
+  margin-left: 10rem;
+  padding: 1em;
+  line-height: 1.5;
+}
