@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../Montserrat/Montserrat-Medium.ttf);
+}
+
+* {
+  font-family: "Montserrat";
+}
+
+.btn {
+  outline: none;
+  border: none;
+  padding: 1em 2em;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid;
+}
+
+.btn-outline-danger {
+  color: #dd2020;
+}
+
+.btn-outline-danger:active {
+  background: #dd2020;
+  color: white;
+}
+
+.btn-outline-warning {
+  color: #996f21;
+}
+
+.btn-outline-warning:active {
+  background: #996f21;
+  color: white;
+}
+
+.btn-outline-success {
+  color: #068906;
+}
+
+.btn-outline-success:active {
+  background: #068906;
+  color: white;
+}
+
+.btn-outline-info {
+  color: #1c76d1;
+}
+
+.btn-outline-info:active {
+  background: #1c76d1;
+  color: white;
+}
+
+.btn-outline-default {
+  color: #727272;
+}
+
+.btn-outline-default:active {
+  background: #727272;
+  color: white;
+}
+
+.btn-alert {
+  color: white;
+}
+
+.btn-alert-danger {
+  background: #dd2020;
+}
+
+.btn-alert-danger:active {
+  background: #b01a1a;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.btn-alert-warning {
+  background: #996f21;
+}
+
+.btn-alert-warning:active {
+  background: #6f5118;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.btn-alert-success {
+  background: #068906;
+}
+
+.btn-alert-success:active {
+  background: #045804;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.btn-alert-info {
+  background: #1c76d1;
+}
+
+.btn-alert-info:active {
+  background: #165da4;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.btn-alert-default {
+  background: #727272;
+}
+
+.btn-alert-default:active {
+  background: #595959;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.notif {
+  position: relative;
+}
+
+.notif-badge {
+  position: absolute;
+  display: block;
+  background: red;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+/*# sourceMappingURL=main.css.map */

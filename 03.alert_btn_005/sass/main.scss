@@ -1,0 +1,79 @@
+@import "../../reset";
+@import "../../typography";
+
+@mixin outline($color) {
+  color: $color;
+  &:active {
+    background: $color;
+    color: white;
+  }
+}
+@mixin alert($color) {
+  background: $color;
+  &:active {
+    background: darken($color, 10);
+    transform: scale(0.95);
+  }
+}
+
+.btn {
+  outline: none;
+  border: none;
+  padding: 1em 2em;
+  transition: 0.3s;
+  &:hover {
+    cursor: pointer;
+  }
+  &-outline {
+    background: transparent;
+    border: 2px solid;
+    &-danger {
+      @include outline(#dd2020);
+    }
+    &-warning {
+      @include outline(#996f21);
+    }
+    &-success {
+      @include outline(#068906);
+    }
+    &-info {
+      @include outline(#1c76d1);
+    }
+    &-default {
+      @include outline(#727272);
+    }
+  }
+  &-alert {
+    color: white;
+    &-danger {
+      @include alert(#dd2020);
+    }
+    &-warning {
+      @include alert(#996f21);
+    }
+    &-success {
+      @include alert(#068906);
+    }
+    &-info {
+      @include alert(#1c76d1);
+    }
+    &-default {
+      @include alert(#727272);
+    }
+  }
+}
+
+.notif {
+  position: relative;
+  &-badge {
+    position: absolute;
+    display: block;
+    background: red;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+}
