@@ -1,0 +1,157 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../Montserrat/Montserrat-Medium.ttf);
+}
+
+* {
+  font-family: "Montserrat";
+}
+
+.signup {
+  background: #f0f0f0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 1em;
+  width: 350px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.signup h1 {
+  color: #1e7ddc;
+}
+
+.signup-input {
+  width: 100%;
+  padding: 0.5em 1em;
+  border-radius: 20px;
+  border: 1px solid gray;
+  outline: none;
+  height: 2.5em;
+  font-size: 1em;
+}
+
+.signup-text {
+  margin-top: 2em;
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 1em 2em;
+  margin-top: 2em;
+  background: #1e7ddc;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  color: white;
+}
+
+.signup-btn:hover {
+  cursor: pointer;
+  background: #1864af;
+}
+
+.signup-btn:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  background: #124a82;
+}
+
+.float {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.float-label {
+  position: absolute;
+  display: block;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  left: 1em;
+  color: gray;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input:focus + .float-label,
+input:valid + .float-label {
+  bottom: 112%;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  color: #1e7ddc;
+}
+
+.checkbox {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  margin-top: 2em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding-left: 2rem;
+  text-align: left;
+  font-size: 0.9em;
+}
+
+.checkbox-input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-checkmark {
+  height: 1.5em;
+  width: 1.5em;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 1px solid lightgray;
+  left: 1rem;
+}
+
+.checkbox-checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 0.33em;
+  top: 0.17em;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 0.33em;
+  height: 0.66em;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.checkbox:hover .checkbox-checkmark {
+  background: #ccc;
+}
+
+.checkbox-input:checked ~ .checkbox-checkmark {
+  background: #1e7ddc;
+}
+
+.checkbox-input:checked ~ .checkbox-checkmark::after {
+  display: block;
+}
+/*# sourceMappingURL=main.css.map */

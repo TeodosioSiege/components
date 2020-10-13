@@ -82,7 +82,8 @@
   transition: 0.4s;
 }
 
-input:focus + .float-label {
+input:focus + .float-label,
+input:valid + .float-label {
   color: #1384b8;
   top: -66%;
   -webkit-transform: translateY(0);

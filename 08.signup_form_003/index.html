@@ -10,11 +10,12 @@
     <form action="" class="signup">
       <h2>Sign Up Now</h2>
       <div class="float">
-        <input type="email" id="email" class="signup-input" />
+        <input type="text" id="email" class="signup-input" required />
+        <!-- pattern="^.*@.+\..+" -->
         <label for="email" class="float-label">Your Email</label>
       </div>
       <div class="float">
-        <input type="password" id="password" class="signup-input" />
+        <input type="password" id="password" class="signup-input" required />
         <label for="password" class="float-label">Your Password</label>
       </div>
       <p class="signup-text">
