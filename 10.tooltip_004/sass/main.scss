@@ -18,13 +18,14 @@
   position: relative;
   &-text {
     position: absolute;
-    display: none;
+    display: block;
     background: teal;
     color: white;
     width: 10rem;
     text-align: center;
     padding: 0.5em 1em;
     z-index: 1;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1.1);
     &::after {
       content: "";
       border: 5px solid transparent;
@@ -33,7 +34,7 @@
     &-top {
       bottom: 125%;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translateX(-50%) scale(0);
       &::after {
         top: 99%;
         left: 50%;
@@ -44,7 +45,7 @@
     &-right {
       left: 125%;
       top: 50%;
-      transform: translateY(-50%);
+      transform: translateY(-50%) scale(0);
       &::after {
         right: 99%;
         top: 50%;
@@ -55,7 +56,7 @@
     &-bottom {
       top: 125%;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translateX(-50%) scale(0);
       &::after {
         bottom: 99%;
         left: 50%;
@@ -66,7 +67,7 @@
     &-left {
       right: 125%;
       top: 50%;
-      transform: translateY(-50%);
+      transform: translateY(-50%) scale(0);
       &::after {
         left: 99%;
         top: 50%;
@@ -77,5 +78,17 @@
   }
   &:hover &-text {
     display: block;
+    &-top {
+      transform: translateX(-50%) scale(1);
+    }
+    &-right {
+      transform: translateY(-50%) scale(1);
+    }
+    &-bottom {
+      transform: translateX(-50%) scale(1);
+    }
+    &-left {
+      transform: translateY(-50%) scale(1);
+    }
   }
 }
