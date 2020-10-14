@@ -1,0 +1,17 @@
+@import "../../reset";
+@import "../../typography";
+
+.parallax {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 128, 128, 0.2)),
+    url("../../eliz.jpg") 0 33% / cover fixed;
+}
+.text {
+  padding: 0.5em 1em;
+  line-height: 1.5;
+}
+
+.parallax:nth-child(3) {
+  background: linear-gradient(rgba(255, 192, 203, 0.33)),
+    url("../../eliz.jpg") 0 33% / cover fixed;
+}
