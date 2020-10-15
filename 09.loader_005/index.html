@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loader</title>
+    <style>
+      .loader {
+        width: 10rem;
+        height: 10rem;
+        border: 1em solid lightgray;
+        border-top: 1em solid hsl(202, 86%, 43%);
+        border-radius: 50%;
+        animation: spin 0.66s linear infinite;
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        from {
+          transform: rotate(360deg);
+        }
+      }
+      .main {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main">
+      <div class="loader"></div>
+    </main>
+  </body>
+</html>
