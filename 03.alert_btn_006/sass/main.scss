@@ -1,0 +1,81 @@
+@import "../../reset";
+@import "../../typography";
+
+@mixin btn_alert($color) {
+  background: $color;
+  &:hover {
+    background: darken($color, 10);
+  }
+}
+@mixin btn_outline($color) {
+  color: $color;
+  border: 2px solid $color;
+  &:hover {
+    background: $color;
+    color: white;
+  }
+}
+
+.btn {
+  padding: 1em 2em;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1.1);
+  outline: none;
+  position: relative;
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+  &-alert {
+    border: none;
+    color: white;
+    &--danger {
+      @include btn_alert(#eb1515);
+    }
+    &--warning {
+      @include btn_alert(#9b690d);
+    }
+    &--success {
+      @include btn_alert(#338000);
+    }
+
+    &--info {
+      @include btn_alert(#167aac);
+    }
+    &--default {
+      @include btn_alert(#808080);
+    }
+  }
+  &-outline {
+    background: transparent;
+    &--danger {
+      @include btn_outline(#eb1515);
+    }
+    &--warning {
+      @include btn_outline(#9b690d);
+    }
+    &--success {
+      @include btn_outline(#338000);
+    }
+    &--info {
+      @include btn_outline(#167aac);
+    }
+    &--default {
+      @include btn_outline(#808080);
+    }
+  }
+}
+
+.badge {
+  position: absolute;
+  display: block;
+  background: #eb1515;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  z-index: 1;
+  top: 0;
+  left: 100%;
+  transform: translate(-50%, -50%);
+}

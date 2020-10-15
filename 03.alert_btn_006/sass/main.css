@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../Montserrat/Montserrat-Medium.ttf);
+}
+
+* {
+  font-family: "Montserrat";
+}
+
+.btn {
+  padding: 1em 2em;
+  -webkit-transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1.1);
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1.1);
+  outline: none;
+  position: relative;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.btn-alert {
+  border: none;
+  color: white;
+}
+
+.btn-alert--danger {
+  background: #eb1515;
+}
+
+.btn-alert--danger:hover {
+  background: #bd1010;
+}
+
+.btn-alert--warning {
+  background: #9b690d;
+}
+
+.btn-alert--warning:hover {
+  background: #6c4909;
+}
+
+.btn-alert--success {
+  background: #338000;
+}
+
+.btn-alert--success:hover {
+  background: #1f4d00;
+}
+
+.btn-alert--info {
+  background: #167aac;
+}
+
+.btn-alert--info:hover {
+  background: #105a7f;
+}
+
+.btn-alert--default {
+  background: #808080;
+}
+
+.btn-alert--default:hover {
+  background: #676767;
+}
+
+.btn-outline {
+  background: transparent;
+}
+
+.btn-outline--danger {
+  color: #eb1515;
+  border: 2px solid #eb1515;
+}
+
+.btn-outline--danger:hover {
+  background: #eb1515;
+  color: white;
+}
+
+.btn-outline--warning {
+  color: #9b690d;
+  border: 2px solid #9b690d;
+}
+
+.btn-outline--warning:hover {
+  background: #9b690d;
+  color: white;
+}
+
+.btn-outline--success {
+  color: #338000;
+  border: 2px solid #338000;
+}
+
+.btn-outline--success:hover {
+  background: #338000;
+  color: white;
+}
+
+.btn-outline--info {
+  color: #167aac;
+  border: 2px solid #167aac;
+}
+
+.btn-outline--info:hover {
+  background: #167aac;
+  color: white;
+}
+
+.btn-outline--default {
+  color: #808080;
+  border: 2px solid #808080;
+}
+
+.btn-outline--default:hover {
+  background: #808080;
+  color: white;
+}
+
+.badge {
+  position: absolute;
+  display: block;
+  background: #eb1515;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  z-index: 1;
+  top: 0;
+  left: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+/*# sourceMappingURL=main.css.map */
