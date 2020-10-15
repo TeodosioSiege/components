@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../Montserrat/Montserrat-Medium.ttf);
+}
+
+* {
+  font-family: "Montserrat";
+}
+
+.main {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  line-height: 1.5;
+}
+
+.overlay {
+  position: relative;
+}
+
+.overlay-img {
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.overlay-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.5em;
+}
+
+.overlay:hover .overlay-card {
+  opacity: 1;
+}
+
+.fade-in .overlay-card {
+  background: teal;
+  color: white;
+}
+
+.fade-box .overlay-text {
+  background: teal;
+  padding: 0.5em 1em;
+  color: white;
+}
+
+.fade-box:hover .overlay-img {
+  opacity: 0.3;
+}
+
+.slide .overlay-card {
+  background: teal;
+  color: white;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.slide .overlay-text {
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.slide:hover .overlay-text {
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.slide-top .overlay-card {
+  top: auto;
+  bottom: 100%;
+  height: 0;
+}
+
+.slide-top:hover .overlay-card {
+  bottom: 0;
+  height: 100%;
+}
+
+.slide-right .overlay-card {
+  left: 100%;
+  width: 0%;
+}
+
+.slide-right:hover .overlay-card {
+  left: 0;
+  width: 100%;
+}
+
+.slide-bottom .overlay-card {
+  top: 100%;
+  height: 0;
+}
+
+.slide-bottom:hover .overlay-card {
+  height: 100%;
+  top: 0;
+}
+
+.slide-left .overlay-card {
+  left: auto;
+  right: 100%;
+  width: 0;
+}
+
+.slide-left:hover .overlay-card {
+  right: 0;
+  width: 100%;
+}
+
+.zoom .overlay-card {
+  background: teal;
+  color: white;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.zoom:hover .overlay-card {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+/*# sourceMappingURL=main.css.map */

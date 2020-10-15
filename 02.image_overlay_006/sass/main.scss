@@ -1,0 +1,144 @@
+@import "../../reset";
+@import "../../typography";
+// body {
+//   height: 100%;
+//   overflow: hidden;
+// }
+
+.main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  line-height: 1.5;
+}
+
+.overlay {
+  position: relative;
+  // border: 1px solid teal;
+  &-img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  &-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.4s;
+  }
+  &-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+  }
+  &:hover &-card {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  .overlay-card {
+    background: teal;
+    color: white;
+  }
+}
+
+.fade-box {
+  .overlay-text {
+    background: teal;
+    padding: 0.5em 1em;
+    color: white;
+  }
+  &:hover {
+    .overlay-img {
+      opacity: 0.3;
+    }
+  }
+}
+
+.slide {
+  .overlay-card {
+    background: teal;
+    color: white;
+    opacity: 1;
+    overflow: hidden;
+  }
+  .overlay-text {
+    opacity: 0;
+    transition: 0.2s;
+  }
+  &:hover {
+    .overlay-text {
+      opacity: 1;
+      transition: 1s;
+    }
+  }
+  &-top {
+    .overlay-card {
+      top: auto;
+      bottom: 100%;
+      height: 0;
+    }
+    &:hover {
+      .overlay-card {
+        bottom: 0;
+        height: 100%;
+      }
+    }
+  }
+  &-right {
+    .overlay-card {
+      left: 100%;
+      width: 0%;
+    }
+    &:hover {
+      .overlay-card {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+  &-bottom {
+    .overlay-card {
+      top: 100%;
+      height: 0;
+    }
+    &:hover {
+      .overlay-card {
+        height: 100%;
+        top: 0;
+      }
+    }
+  }
+  &-left {
+    .overlay-card {
+      left: auto;
+      right: 100%;
+      width: 0;
+    }
+    &:hover {
+      .overlay-card {
+        right: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.zoom {
+  .overlay-card {
+    background: teal;
+    color: white;
+    transform: scale(0);
+  }
+  &:hover {
+    .overlay-card {
+      transform: scale(1);
+    }
+  }
+}
