@@ -1,0 +1,86 @@
+@import "../../reset";
+@import "../../typography";
+body {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  background: teal;
+  position: relative;
+}
+
+.nav {
+  background: inherit;
+  color: white;
+  width: 80%;
+  margin: 0 auto;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-logo {
+    font-size: 1.5em;
+    letter-spacing: 0.33em;
+  }
+  &-links {
+    display: flex;
+    width: 50%;
+    min-width: 360px;
+    background: inherit;
+    justify-content: space-around;
+    list-style-type: none;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.burger {
+  display: none;
+}
+
+@media screen AND (max-width: 550px) {
+  .nav-links {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50%;
+    height: 92vh;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+  }
+  .burger {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: inherit;
+    position: relative;
+    &-line {
+      height: 2px;
+      width: 1.5rem;
+      background: white;
+      position: absolute;
+      top: 50%;
+      z-index: 1;
+      transform: translateY(-50%);
+    }
+    &::before {
+      content: "";
+      height: 2px;
+      width: 1.5rem;
+      background: white;
+      position: absolute;
+      top: 0;
+    }
+    &::after {
+      content: "";
+      height: 2px;
+      width: 1.5rem;
+      background: white;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
