@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../../Montserrat/Montserrat-Medium.ttf);
+}
+
+* {
+  font-family: "Montserrat";
+}
+
+.main {
+  background: #f1f1f1;
+  width: 66vw;
+  height: 5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.toggle {
+  background: white;
+  width: 3.5rem;
+  height: 2rem;
+  position: relative;
+}
+
+.toggle-checkbox {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.toggle-slider {
+  background: lightgray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: 0.4s cubic-bezier(0.075, 0.52, 0.8, 1.1);
+  transition: 0.4s cubic-bezier(0.075, 0.52, 0.8, 1.1);
+}
+
+.toggle-slider::after {
+  content: "";
+  background: white;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  left: 0.25rem;
+  -webkit-transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1.1);
+  transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1.1);
+}
+
+.toggle-checkbox:checked ~ .toggle-slider {
+  background: #1293d3;
+}
+
+.toggle-checkbox:checked ~ .toggle-slider::after {
+  -webkit-transform: translate(100%, -50%);
+          transform: translate(100%, -50%);
+}
+
+.toggle-round {
+  border-radius: 50px;
+}
+
+.toggle-round .toggle-slider {
+  border-radius: 50px;
+}
+
+.toggle-round .toggle-slider::after {
+  border-radius: 50%;
+}
+/*# sourceMappingURL=main.css.map */
