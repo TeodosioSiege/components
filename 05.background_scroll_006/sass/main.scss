@@ -1,0 +1,19 @@
+@import "../../reset";
+@import "../../typography";
+
+.background {
+  height: 33vh;
+  background: url("../../eliz.jpg") 0 33% / cover;
+}
+
+.text {
+  position: fixed;
+  font-size: 4rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0.5rem solid;
+  color: white;
+  padding: 0.5em 1em;
+  background: rgba(0, 0, 0, 0.205);
+}
